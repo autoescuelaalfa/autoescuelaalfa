@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Autoescuela Alfa - Autoescuela en Fuengirola</title>
+        <meta name="description" content="Autoescuela en Fuengirola. Permiso B manual y automático, teórico online 24/7 y prácticas todos los días. Exámenes en Marbella sin esperas.">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+        <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#1e40af",
+        "primary-dark": "#1e3a8a",
+        "primary-light": "#dbeafe",
+        "primary-50": "#eff6ff",
+        "accent": "#f59e0b",
+        "accent-light": "#fef3c7",
+        "accent-dark": "#d97706",
+        "surface": "#f8fafc",
+        "on-surface": "#0f172a",
+        "on-surface-variant": "#475569",
+        "outline-variant": "#cbd5e1",
+        "whatsapp": "#25d366",
+      },
+      fontFamily: {
+        "headline": ["Outfit", "sans-serif"],
+        "body": ["DM Sans", "sans-serif"],
+      },
+      borderRadius: {
+        "DEFAULT": "1rem",
+        "xl": "1.5rem",
+        "2xl": "2rem",
+        "3xl": "2.5rem",
+        "full": "9999px"
+      },
+    },
+  },
+}
+        </script>
+        <style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.glass-nav { background: rgba(255,255,255,0.82); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+.hero-gradient { background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 40%, #fef3c7 100%); }
+@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.animate-marquee { display:flex; width:max-content; animation: marquee 60s linear infinite; }
+.animate-marquee:hover { animation-play-state: paused; }
+.card-service { transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+.card-service:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(30,64,175,0.15); }
+.faq-answer { max-height:0; overflow:hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s ease; padding-top:0; padding-bottom:0; }
+.faq-answer.open { max-height:300px; padding-top:1rem; padding-bottom:0.5rem; }
+.faq-icon { transition: transform 0.3s ease; }
+.faq-item.active .faq-icon { transform: rotate(180deg); }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.tiktok-glow { box-shadow: 0 0 60px rgba(30,64,175,0.08), 0 0 120px rgba(245,158,11,0.06); }
+        </style>
+    </head>
+    <body class="bg-white font-body text-on-surface antialiased">
+        <!-- NAVIGATION -->
+        <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/60">
+            <div class="flex justify-between items-center px-5 md:px-10 lg:px-16 py-4 max-w-7xl mx-auto">
+                <a href="#home" class="text-2xl font-extrabold tracking-tight text-primary font-headline">Autoescuela Alfa</a>
+                <div class="hidden md:flex space-x-8 items-center font-semibold text-sm">
+                    <a class="text-primary" href="#home">Inicio</a>
+                    <a class="text-slate-500 hover:text-primary transition-colors duration-300" href="#benefits">Ventajas</a>
+                    <a class="text-slate-500 hover:text-primary transition-colors duration-300" href="#process">Proceso</a>
+                    <a class="text-slate-500 hover:text-primary transition-colors duration-300" href="#fleet">Flota</a>
+                    <a class="text-slate-500 hover:text-primary transition-colors duration-300" href="#faq">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a
+                        href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"
+                        target="_blank"
+                        rel="noopener"
+                        class="hidden lg:block text-slate-500 font-bold text-sm hover:text-primary transition-colors"
+                    >Ver nota de examen</a>
+                    <a
+                        href="http://matferline.com/validar_ae.php?acceso=alfa"
+                        target="_blank"
+                        rel="noopener"
+                        class="bg-primary text-white px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-primary-dark transition-all active:scale-95 shadow-md shadow-primary/20"
+                    >Teórico Online</a>
+                </div>
+            </div>
+        </nav>
+        <!-- HERO -->
+        <section class="relative pt-28 pb-20 md:pt-36 md:pb-28 hero-gradient overflow-hidden" id="home">
+            <div class="absolute top-20 right-[-10%] w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent/5 blur-[100px]"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-10 lg:px-16 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Inscripciones abiertas 2026
+                    </div>
+                    <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-on-surface leading-[1.08]">
+                        Autoescuela en
+                        <span class="text-primary">Marbella</span>
+                        y
+                        <span class="text-primary">Fuengirola</span>
+                        – Consigue tu carnet sin complicaciones
+                    </h1>
+                    <p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Permiso B manual y automático, teórico online y prácticas todos los días. La educación premium que se adapta a tu ritmo costero.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a
+                            href="http://matferline.com/validar_ae.php?acceso=alfa"
+                            target="_blank"
+                            rel="noopener"
+                            class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 active:scale-95 gap-2"
+                        >
+                            <span class="material-symbols-outlined text-lg">school</span>
+                            Acceder al Teórico Online
+                        </a>
+                        <a
+                            href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"
+                            target="_blank"
+                            rel="noopener"
+                            class="inline-flex items-center justify-center bg-white text-primary border-2 border-primary/20 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:border-primary/40 hover:bg-primary-50 transition-all active:scale-95 gap-2"
+                        >
+                            <span class="material-symbols-outlined text-lg">fact_check</span>
+                            Ver nota de examen
+                        </a>
+                    </div>
+                </div>
+                <div class="relative mt-4 lg:mt-0">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 border border-white/80" style="aspect-ratio:4/3;">
+                        <img
+                            src="Vehículo 1.jpg"
+                            alt="Flota de vehículos Autoescuela Alfa en Fuengirola"
+                            class="w-full h-full object-cover"
+                            loading="eager"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex flex-col justify-end p-6 md:p-8">
+                            <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-3 w-fit">
+                                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block"></span>
+                                Flota moderna disponible
+                            </span>
+                            <p class="text-white font-extrabold text-xl md:text-2xl font-headline">Coches manuales y automáticos</p>
+                            <p class="text-blue-100 text-sm mt-1">Prácticas todos los días, incluidos festivos</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-5 -left-4 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-4 border border-slate-100 animate-float">
+                        <div class="w-10 h-10 rounded-xl bg-accent-light flex items-center justify-center">
+                            <span class="material-symbols-outlined text-accent-dark text-xl">verified</span>
+                        </div>
+                        <div>
+                            <div class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Exámenes</div>
+                            <div class="font-bold text-sm text-on-surface">En Marbella · Sin esperas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- VALUE PROP -->
+        <section class="bg-white py-20 md:py-28 border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+                <div class="max-w-3xl mx-auto text-center space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-light text-accent-dark text-xs font-bold uppercase tracking-widest">
+                        <span class="material-symbols-outlined text-sm">star</span>
+                        Plataforma online
+                    </div>
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">
+                        Libertad total con nuestro
+                        <span class="text-primary">Teórico Online</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+                        Nuestra plataforma inteligente te permite estudiar desde la playa, el café o el sofá. Sin horarios rígidos, sin desplazamientos innecesarios y con soporte directo.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- BENEFITS / SERVICES CARDS -->
+        <section class="py-20 md:py-28 bg-slate-50/50" id="benefits">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">
+                        ¿Por qué
+                        <span class="text-primary">elegirnos</span>
+                        ?
+                    </h2>
+                    <p class="mt-4 text-on-surface-variant text-lg">Todo lo que necesitas para sacarte el carnet de forma fácil y rápida</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Card 1 -->
+                    <div class="card-service group p-8 md:p-10 rounded-2xl bg-white border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-primary rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary-light text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-400">
+                            <span class="material-symbols-outlined text-[28px]">devices</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3 text-on-surface">Teórico online 24/7</h3>
+                        <p class="text-on-surface-variant leading-relaxed text-[15px]">Accede a todo el temario y tests oficiales desde cualquier dispositivo, en cualquier momento y lugar.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card-service group p-8 md:p-10 rounded-2xl bg-white border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-accent rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-accent-light text-accent-dark flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-400">
+                            <span class="material-symbols-outlined text-[28px]">calendar_month</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3 text-on-surface">Prácticas todos los días</h3>
+                        <p class="text-on-surface-variant leading-relaxed text-[15px]">Incluyendo fines de semana y festivos. Nos adaptamos totalmente a tu agenda laboral o personal.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card-service group p-8 md:p-10 rounded-2xl bg-white border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-primary rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary-light text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-400">
+                            <span class="material-symbols-outlined text-[28px]">bolt</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3 text-on-surface">Sin lista de espera</h3>
+                        <p class="text-on-surface-variant leading-relaxed text-[15px]">Empezamos las prácticas en cuanto apruebes el teórico. Tu carnet, más rápido que nunca.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card-service group p-8 md:p-10 rounded-2xl bg-white border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-accent rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-accent-light text-accent-dark flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-400">
+                            <span class="material-symbols-outlined text-[28px]">directions_car</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3 text-on-surface">Manual y Automático</h3>
+                        <p class="text-on-surface-variant leading-relaxed text-[15px]">Elige el vehículo que prefieras. Flota moderna equipada con las últimas tecnologías de seguridad.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="card-service group p-8 md:p-10 rounded-2xl bg-white border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-primary rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary-light text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-400">
+                            <span class="material-symbols-outlined text-[28px]">verified_user</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3 text-on-surface">Alto % de aprobados</h3>
+                        <p class="text-on-surface-variant leading-relaxed text-[15px]">Nuestro método personalizado garantiza resultados excepcionales en tiempo récord.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="card-service group p-8 md:p-10 rounded-2xl bg-white border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-accent rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-14 h-14 rounded-2xl bg-accent-light text-accent-dark flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-400">
+                            <span class="material-symbols-outlined text-[28px]">map</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3 text-on-surface">Exámenes en Marbella</h3>
+                        <p class="text-on-surface-variant leading-relaxed text-[15px]">Realizamos todos las rutas posibles para que el día del examen vayas tranquilo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PROCESS TIMELINE -->
+        <section class="py-20 md:py-28 bg-white overflow-hidden" id="process">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+                <div class="text-center mb-20">
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">
+                        Tu camino al
+                        <span class="text-primary">carnet</span>
+                    </h2>
+                    <p class="mt-4 text-on-surface-variant text-lg">Cuatro pasos sencillos para tu independencia al volante</p>
+                </div>
+                <div class="relative">
+                    <div class="hidden lg:block absolute top-1/2 left-0 w-full h-[2px] bg-slate-100 -translate-y-1/2 z-0">
+                        <div class="h-full bg-gradient-to-r from-primary/30 via-primary/20 to-accent/30 w-full rounded-full"></div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 relative z-10">
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-20 h-20 rounded-full bg-primary-light border-4 border-white flex items-center justify-center text-2xl font-extrabold text-primary shadow-lg shadow-primary/10 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-400 mb-8 font-headline">1</div>
+                            <h4 class="font-headline font-bold text-lg mb-3">Estudia online</h4>
+                            <p class="text-on-surface-variant text-sm px-2 leading-relaxed">Contenido dinámico, tests actualizados y soporte 24/7 en nuestra plataforma.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-20 h-20 rounded-full bg-primary-light border-4 border-white flex items-center justify-center text-2xl font-extrabold text-primary shadow-lg shadow-primary/10 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-400 mb-8 font-headline">2</div>
+                            <h4 class="font-headline font-bold text-lg mb-3">Aprueba el teórico</h4>
+                            <p class="text-on-surface-variant text-sm px-2 leading-relaxed">Te acompañamos a examen cuando estés 100% preparado para aprobar a la primera.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-20 h-20 rounded-full bg-primary-light border-4 border-white flex items-center justify-center text-2xl font-extrabold text-primary shadow-lg shadow-primary/10 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-400 mb-8 font-headline">3</div>
+                            <h4 class="font-headline font-bold text-lg mb-3">Empieza prácticas</h4>
+                            <p class="text-on-surface-variant text-sm px-2 leading-relaxed">Sin esperas. Reserva tus clases prácticas de inmediato con nuestros instructores.</p>
+                        </div>
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-20 h-20 rounded-full bg-accent border-4 border-white flex items-center justify-center text-2xl font-extrabold text-white shadow-lg shadow-accent/20 group-hover:scale-110 transition-all duration-400 mb-8 font-headline">4</div>
+                            <h4 class="font-headline font-bold text-lg mb-3">¡Consigue tu carnet!</h4>
+                            <p class="text-on-surface-variant text-sm px-2 leading-relaxed">Supera el examen práctico en Marbella y empieza a disfrutar de la carretera.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- LOCATION -->
+        <section class="py-20 md:py-28 bg-slate-50/50" id="location">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] shadow-xl relative z-10 border border-slate-200/60">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12897.24555217441!2d-4.625983!3d36.539553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d98a42d89f03%3A0x278c3e20a5e2785a!2sFuengirola%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1710000000000"
+                            width="100%"
+                            height="100%"
+                            style="border:0;min-height:320px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa Autoescuela Alfa en Fuengirola"
+                        ></iframe>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8">
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">
+                        Aprende en
+                        <span class="text-primary">Fuengirola</span>
+                        y 
+                        <span class="text-primary">Marbella</span>
+                    </h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed">
+                        Nuestra base central en
+                        <span class="font-bold text-primary">Fuengirola</span>
+                        ofrece el entorno perfecto para tus primeras tomas de contacto, mientras que nuestras rutas en
+                        <span class="font-bold text-primary">Marbella</span>
+                        te preparan para el examen final en circuitos reales de la DGT.
+                    </p>
+                    <p class="text-lg text-on-surface-variant leading-relaxed">
+                        También prestamos servicio personalizado a residentes de
+                        <a href="https://autoescuelaojen.es/">
+                            <span class="font-bold text-primary">Ojén</span>
+                        </a>
+                        ,
+    facilitando el acceso a una educación vial premium.
+                    </p>
+                    <div class="flex items-start gap-5 p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                        <div class="mt-1 h-12 w-12 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-primary">pin_drop</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-lg text-on-surface mb-1">Ubicación Estratégica</div>
+                            <div class="text-on-surface-variant text-[15px]">Proximidad total a las zonas de examen oficiales de la DGT.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- APPROVED STUDENTS MARQUEE -->
+        <section class="py-20 md:py-28 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 mb-14">
+                <div class="text-center">
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">
+                        Nuestros
+                        <span class="text-primary">Aprobados</span>
+                    </h2>
+                    <p class="mt-4 text-on-surface-variant text-lg">Cada semana nuevos conductores salen a la carretera</p>
+                </div>
+            </div>
+            <div class="relative w-full overflow-hidden">
+                <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+                <div class="animate-marquee gap-5 pr-5">
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Adam aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Adam%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Ainara aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Ainara%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Amina aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Amina%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Athenea aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Athenea%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Christian aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Christian%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="David aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/David%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="David Jaime aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/David%20Jaime%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Eusebio aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Eusebio%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Itai aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Itai%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Ivonne aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Ivonne%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Jose Alberto aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Jose%20Alberto%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Marcos aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Marcos%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Marcos B aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Marcos%20B%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Modou aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Modou%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Ori aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Ori%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Oscar aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Oscar%20Apto.jpg"
+                        >
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Adam aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Adam%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Ainara aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Ainara%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Amina aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Amina%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Athenea aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Athenea%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Christian aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Christian%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="David aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/David%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="David Jaime aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/David%20Jaime%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Eusebio aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Eusebio%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Itai aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Itai%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Ivonne aprobada en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Ivonne%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Jose Alberto aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Jose%20Alberto%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Marcos aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Marcos%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Marcos B aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Marcos%20B%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Modou aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Modou%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Ori aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Ori%20Apto.jpg"
+                        >
+                    </div>
+                    <div class="flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                        <img
+                            alt="Oscar aprobado en Autoescuela Alfa"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                            src="APTOS/Oscar%20Apto.jpg"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FLEET COLLAGE -->
+        <section class="py-20 md:py-28 bg-slate-50/50" id="fleet">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+                <div class="text-center mb-14">
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">
+                        Nuestra
+                        <span class="text-primary">Flota</span>
+                    </h2>
+                    <p class="mt-4 text-on-surface-variant text-lg">Vehículos modernos para tu formación, manuales y automáticos</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+                    <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer" style="aspect-ratio:1/1;">
+                        <img
+                            src="Vehículo 1.jpg"
+                            alt="Vehículo de prácticas Autoescuela Alfa"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer" style="aspect-ratio:1/1;">
+                        <img
+                            src="Vehículo 2.webp"
+                            alt="Vehículo de prácticas manual"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer" style="aspect-ratio:1/1;">
+                        <img
+                            src="Vehículo 3.webp"
+                            alt="Vehículo de prácticas automático"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="col-span-2 rounded-2xl overflow-hidden shadow-lg border border-slate-100 group cursor-pointer" style="aspect-ratio:1.5/1;">
+                        <img
+                            src="correg.webp"
+                            alt="Vehículo de prácticas Autoescuela Alfa"
+                            class="w-full h-full object-cover scale-[1.15] group-hover:scale-[1.20] transition-transform duration-700"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TIKTOK SECTION -->
+        <section class="py-20 md:py-28 bg-white">
+            <div class="max-w-5xl mx-auto px-5 md:px-10 lg:px-16">
+                <div class="tiktok-glow rounded-3xl bg-gradient-to-br from-primary-50 via-white to-accent-light p-10 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-16 border border-slate-100">
+                    <div class="flex-shrink-0 text-center">
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-3xl bg-on-surface flex items-center justify-center mx-auto shadow-xl">
+                            <svg viewBox="0 0 24 24" class="w-12 h-12 md:w-14 md:h-14" fill="white">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/>
+                            </svg>
+                        </div>
+                        <div class="mt-5 flex items-center justify-center gap-2">
+                            <span class="text-3xl md:text-4xl font-extrabold font-headline text-on-surface">1.3M+</span>
+                        </div>
+                        <p class="text-on-surface-variant text-sm font-medium">visualizaciones</p>
+                    </div>
+                    <div class="flex-1 text-center md:text-left space-y-5">
+                        <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">
+                            Síguenos en
+                            <span class="text-primary">TikTok</span>
+                        </h2>
+                        <p class="text-on-surface-variant text-lg leading-relaxed">Somos la autoescuela más viral de la Costa del Sol. Consejos, retos al volante y mucho contenido para que aprendas mientras te diviertes.</p>
+                        <a
+                            href="https://tiktok.com/@autoescuelaalfa"
+                            target="_blank"
+                            rel="noopener"
+                            class="inline-flex items-center gap-2 bg-on-surface text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-slate-800 transition-all active:scale-95 shadow-lg"
+                        >
+                            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/>
+                            </svg>
+                            Seguir en TikTok
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ + WHATSAPP -->
+        <section class="py-20 md:py-28 bg-slate-50/50" id="faq">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+                <div class="text-center mb-14">
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">
+                        Preguntas
+                        <span class="text-primary">Frecuentes</span>
+                    </h2>
+                    <p class="mt-4 text-on-surface-variant text-lg">Resolvemos tus dudas antes de empezar</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- FAQ Accordion -->
+                    <div class="lg:col-span-2 space-y-4">
+                        <div class="faq-item bg-white rounded-2xl border border-slate-100 overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-headline font-bold text-on-surface text-lg hover:text-primary transition-colors">
+                                ¿Puedo preparar el teórico online?
+                                <span class="material-symbols-outlined faq-icon text-primary">expand_more</span>
+                            </button>
+                            <div class="faq-answer px-6 text-on-surface-variant leading-relaxed">Sí. Nuestra plataforma online está disponible 24/7 con tests actualizados de la DGT. Estudia desde el móvil, tablet u ordenador, cuando y donde quieras.</div>
+                        </div>
+                        <div class="faq-item bg-white rounded-2xl border border-slate-100 overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-headline font-bold text-on-surface text-lg hover:text-primary transition-colors">
+                                ¿Hacéis prácticas los fines de semana?
+                                <span class="material-symbols-outlined faq-icon text-primary">expand_more</span>
+                            </button>
+                            <div class="faq-answer px-6 text-on-surface-variant leading-relaxed">Sí, damos clases prácticas todos los días incluyendo fines de semana y festivos. Nos adaptamos completamente a tu agenda.</div>
+                        </div>
+                        <div class="faq-item bg-white rounded-2xl border border-slate-100 overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-headline font-bold text-on-surface text-lg hover:text-primary transition-colors">
+                                ¿Dónde se hacen los exámenes prácticos?
+                                <span class="material-symbols-outlined faq-icon text-primary">expand_more</span>
+                            </button>
+                            <div class="faq-answer px-6 text-on-surface-variant leading-relaxed">Los exámenes prácticos se realizan en Marbella, en las zona de examen de la DGT. Te preparamos con las rutas reales de examen para que vayas con total confianza.</div>
+                        </div>
+                        <div class="faq-item bg-white rounded-2xl border border-slate-100 overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-headline font-bold text-on-surface text-lg hover:text-primary transition-colors">
+                                ¿Cuánto se tarda en sacarse el carnet?
+                                <span class="material-symbols-outlined faq-icon text-primary">expand_more</span>
+                            </button>
+                            <div class="faq-answer px-6 text-on-surface-variant leading-relaxed"> Depende de tu ritmo, pero muchos alumnos aprueban el teórico en pocas semanas, las prácticas según tu disponibilidad. Empezamos prácticas en cuanto apruebes el teórico.</div>
+                        </div>
+                        <div class="faq-item bg-white rounded-2xl border border-slate-100 overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-headline font-bold text-on-surface text-lg hover:text-primary transition-colors">
+                                ¿Tenéis coches automáticos?
+                                <span class="material-symbols-outlined faq-icon text-primary">expand_more</span>
+                            </button>
+                            <div class="faq-answer px-6 text-on-surface-variant leading-relaxed">Sí, nuestra flota incluye vehículos manuales y automáticos. Tú eliges con qué tipo de coche quieres hacer las prácticas y el examen.</div>
+                        </div>
+                    </div>
+                    <!-- Contact Sidebar -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-2xl border border-slate-100 p-8 text-center space-y-5">
+                            <div class="w-16 h-16 rounded-2xl bg-primary-light flex items-center justify-center mx-auto">
+                                <span class="material-symbols-outlined text-primary text-3xl">help_center</span>
+                            </div>
+                            <h3 class="font-headline font-bold text-xl text-on-surface">¿Tienes más dudas?</h3>
+                            <p class="text-on-surface-variant text-[15px] leading-relaxed">Escríbenos por WhatsApp y te respondemos al momento. Sin compromiso.</p>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=34693573074"
+                                target="_blank"
+                                rel="noopener"
+                                class="flex items-center justify-center gap-2 w-full bg-whatsapp text-white px-6 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all active:scale-95 shadow-lg shadow-whatsapp/25"
+                            >
+                                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                Escribir por WhatsApp
+                            </a>
+                        </div>
+                        <div class="bg-on-surface rounded-2xl p-8 text-center space-y-4">
+                            <svg viewBox="0 0 24 24" class="w-10 h-10 mx-auto" fill="white">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/>
+                            </svg>
+                            <p class="text-white font-headline font-bold text-lg">Mira nuestros vídeos</p>
+                            <p class="text-slate-400 text-sm">+1.3M visualizaciones</p>
+                            <a
+                                href="https://tiktok.com/@autoescuelaalfa"
+                                target="_blank"
+                                rel="noopener"
+                                class="inline-flex items-center justify-center gap-2 w-full bg-white/10 text-white border border-white/20 px-6 py-3 rounded-full font-bold text-sm hover:bg-white/20 transition-all"
+                            >Seguir en TikTok</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FINAL CTA -->
+        <section class="py-16 md:py-20 px-5 md:px-10">
+            <div class="max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-primary to-primary-dark text-white p-10 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-primary/30">
+                <div class="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-60 h-60 bg-accent/10 rounded-full -ml-24 -mb-24 blur-3xl"></div>
+                <div class="relative z-10 space-y-8">
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">¿Listo para tomar el volante?</h2>
+                    <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto opacity-90">Empieza hoy mismo con nuestro método premium. Sin colas, sin esperas, solo tú y la libertad de la carretera.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                        <a
+                            href="http://matferline.com/validar_ae.php?acceso=alfa"
+                            target="_blank"
+                            rel="noopener"
+                            class="inline-flex items-center justify-center gap-2 bg-white text-primary px-10 py-5 rounded-full font-extrabold text-sm uppercase tracking-wider hover:bg-blue-50 transition-all shadow-xl active:scale-95"
+                        >
+                            <span class="material-symbols-outlined text-lg">school</span>
+                            Acceder al Teórico Online
+                        </a>
+                        <a
+                            href="https://api.whatsapp.com/send?phone=34693573074"
+                            target="_blank"
+                            rel="noopener"
+                            class="inline-flex items-center justify-center gap-2 bg-whatsapp text-white px-10 py-5 rounded-full font-extrabold text-sm uppercase tracking-wider hover:brightness-110 transition-all active:scale-95"
+                        >
+                            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer class="bg-on-surface text-white py-12 md:py-16">
+            <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
+                    <div class="text-center md:text-left">
+                        <div class="text-xl font-extrabold tracking-tight font-headline mb-2">Autoescuela Alfa</div>
+                        <p class="text-slate-400 text-sm">Fuengirola, Málaga · info@autoescuelaalfa.es</p>
+                    </div>
+                    <div class="flex items-center gap-6 text-sm text-slate-400">
+                        <a class="hover:text-white transition-colors" href="#home">Inicio</a>
+                        <a class="hover:text-white transition-colors" href="#benefits">Ventajas</a>
+                        <a class="hover:text-white transition-colors" href="#faq">FAQ</a>
+                        <a class="hover:text-white transition-colors" href="#">Privacidad</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a
+                            href="https://tiktok.com/@autoescuelaalfa"
+                            target="_blank"
+                            rel="noopener"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                            aria-label="TikTok"
+                        >
+                            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/>
+                            </svg>
+                        </a>
+                        <a
+                            href="https://api.whatsapp.com/send?phone=34693573074"
+                            target="_blank"
+                            rel="noopener"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-whatsapp/30 transition-colors"
+                            aria-label="WhatsApp"
+                        >
+                            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-10 pt-8 border-t border-white/10 text-center">
+                    <p class="text-xs text-slate-500">© 2026 Autoescuela Alfa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- FAQ Toggle Script -->
+        <script>
+function toggleFaq(btn){
+  var item = btn.parentElement;
+  var answer = btn.nextElementSibling;
+  var wasOpen = answer.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-answer').forEach(function(a){ a.classList.remove('open'); });
+  document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('active'); });
+  // Open clicked if wasn't open
+  if(!wasOpen){ answer.classList.add('open'); item.classList.add('active'); }
+}
+        </script>
+    </body>
+</html>
